@@ -8,11 +8,11 @@ public record AtualizacaoDadosAlunos(
 		@NotNull
 		Long id,
 		
-		String nome,
+		String student,
 		
-		Curso curso, 
+		Curso course, 
 		
-		Periodo periodo, 
+		Periodo period, 
 		
 		@Email
 		String email) {
