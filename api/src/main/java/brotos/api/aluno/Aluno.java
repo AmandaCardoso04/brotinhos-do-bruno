@@ -25,7 +25,6 @@ public class Aluno {
 	private String nome;
 	private String nomeMae;
 	private String nomePai;
-	private String matricula; 
 	private String idade;
 	private String telefone;
 	private String email;
@@ -39,7 +38,6 @@ public class Aluno {
 		this.nome = dados.nome();
 		this.nomeMae = dados.nomeMae();
 		this.nomePai = dados.nomePai();
-		this.matricula = dados.matricula();
 		this.idade = dados.idade();
 		this.email = dados.email();
 		this.curso = dados.curso();
@@ -72,12 +70,7 @@ public class Aluno {
 	public void setNomePai(String nomePai) {
 		this.nomePai = nomePai;
 	}
-	public String getMatricula() {
-		return matricula;
-	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
+
 	public String getIdade() {
 		return idade;
 	}
@@ -106,9 +99,7 @@ public class Aluno {
 		if(dados.nome() != null) {
 			this.nome = dados.nome();
 			}
-		if(dados.matricula() != null) {
-		this.matricula = dados.matricula();
-		}
+	
 		if(dados.curso() != null) {
 			this.curso = dados.curso();
 		}

@@ -19,10 +19,6 @@ public record DadosCadastroAluno(
 		String telefone,
 		
 		@NotBlank
-		//@Pattern(regexp ="\\d-{4,8}") //qtos digitos tem que ter na matricula
-		String matricula, 
-		
-		@NotBlank
 		//@Pattern(regexp ="\\d-{1,6}")
 		String idade, 
 		
