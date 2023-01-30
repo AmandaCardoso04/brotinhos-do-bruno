@@ -22,30 +22,28 @@ public class Aluno {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String nomeMae;
-	private String nomePai;
-	private String matricula; 
-	private String idade;
-	private String telefone;
+	private String student;
+	private String mother;
+	private String father;
+	private String age;
+	private String phone;
 	private String email;
-	private String senha;
+	private String password;
 	
 	@Enumerated(EnumType.STRING)
-	private Curso curso;
-	private Periodo periodo;
+	private Curso course;
+	private Periodo period;
 	
 	public Aluno(DadosCadastroAluno dados) {
-		this.nome = dados.nome();
-		this.nomeMae = dados.nomeMae();
-		this.nomePai = dados.nomePai();
-		this.matricula = dados.matricula();
-		this.idade = dados.idade();
+		this.student = dados.student();
+		this.mother = dados.mother();
+		this.father = dados.father();
+		this.age = dados.age();
 		this.email = dados.email();
-		this.curso = dados.curso();
-		this.periodo = dados.periodo();
-		this.telefone = dados.telefone();
-		this.senha = dados.senha();
+		this.course = dados.course();
+		this.period = dados.period();
+		this.phone = dados.phone();
+		this.password = dados.password();
 		
 	}
 	public Long getId() {
@@ -54,35 +52,30 @@ public class Aluno {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getStudent() {
+		return student;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setStudent(String student) {
+		this.student = student;
 	}
-	public String getNomeMae() {
-		return nomeMae;
+	public String getMother() {
+		return mother;
 	}
-	public void setNomeMae(String nomeMae) {
-		this.nomeMae = nomeMae;
+	public void setMother(String mother) {
+		this.mother = mother;
 	}
-	public String getNomePai() {
-		return nomePai;
+	public String getFather() {
+		return father;
 	}
-	public void setNomePai(String nomePai) {
-		this.nomePai = nomePai;
+	public void setFather(String father) {
+		this.father = father;
 	}
-	public String getMatricula() {
-		return matricula;
+
+	public String getAge() {
+		return age;
 	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-	public String getIdade() {
-		return idade;
-	}
-	public void setIdade(String idade) {
-		this.idade = idade;
+	public void setAge(String age) {
+		this.age = age;
 	}
 	public String getEmail() {
 		return email;
@@ -90,46 +83,44 @@ public class Aluno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Curso getCurso() {
-		return curso;
+	public Curso getCourse() {
+		return course;
 	}
-	public void setCurso(Curso curso) {
-		this.curso = curso;
+	public void setCourse(Curso course) {
+		this.course = course;
 	}
-	public Periodo getPeriodo() {
-		return periodo;
+	public Periodo getPeriod() {
+		return period;
 	}
-	public void setPeriodo(Periodo periodo) {
-		this.periodo = periodo;
+	public void setPeriod(Periodo period) {
+		this.period = period;
 	}
 	public void atualizarDados(@Valid AtualizacaoDadosAlunos dados) {
-		if(dados.nome() != null) {
-			this.nome = dados.nome();
+		if(dados.student() != null) {
+			this.student = dados.student();
 			}
-		if(dados.matricula() != null) {
-		this.matricula = dados.matricula();
+	
+		if(dados.course() != null) {
+			this.course = dados.course();
 		}
-		if(dados.curso() != null) {
-			this.curso = dados.curso();
-		}
-		if(dados.periodo() != null) {
-			this.periodo = dados.periodo();
+		if(dados.period() != null) {
+			this.period = dados.period();
 		}
 		if(dados.email() != null) {
 			this.email = dados.email();
 		}
 	}
-	public String getTelefone() {
-		return telefone;
+	public String getphone() {
+		return phone;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setphone(String phone) {
+		this.phone = phone;
 	}
-	public String getSenha() {
-		return senha;
+	public String getpassword() {
+		return password;
 	}
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setpassword(String password) {
+		this.password = password;
 	}
 
 }

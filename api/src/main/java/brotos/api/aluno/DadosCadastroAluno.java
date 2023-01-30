@@ -7,36 +7,31 @@ import jakarta.validation.constraints.NotNull;
 public record DadosCadastroAluno(
 		
 		@NotBlank //nao pode ser vazio nem nulo
-		String nome,
+		String student,
 		
 		@NotNull
-		String nomeMae,
+		String mother,
 		
 		@NotNull
-		String nomePai,
+		String father,
 		
 		@NotBlank
-		String telefone,
-		
-		@NotBlank
-		//@Pattern(regexp ="\\d-{4,8}") //qtos digitos tem que ter na matricula
-		String matricula, 
+		String phone,
 		
 		@NotBlank
 		//@Pattern(regexp ="\\d-{1,6}")
-		String idade, 
+		String age, 
 		
 		@NotNull // nao notblank pq é um enum
-		Curso curso, 
+		Curso course, 
 		
 		@NotNull
-		Periodo periodo, 
+		Periodo period, 
 		
 		@NotBlank
 		@Email
 		String email, 
 		
-		@NotBlank
-		String senha) {
+		String password) {
 
 }

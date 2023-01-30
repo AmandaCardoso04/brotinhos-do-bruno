@@ -8,14 +8,11 @@ public record AtualizacaoDadosAlunos(
 		@NotNull
 		Long id,
 		
-		String nome,
+		String student,
 		
-		//@Pattern(regexp ="\\d-{4,8}") //qtos digitos tem que ter na matricula
-		String matricula, 
+		Curso course, 
 		
-		Curso curso, 
-		
-		Periodo periodo, 
+		Periodo period, 
 		
 		@Email
 		String email) {

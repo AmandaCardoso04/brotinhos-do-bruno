@@ -1,10 +1,10 @@
 package brotos.api.aluno;
 
-public record AlunoListagemDados(Long id, String nome, String nomeMae,String nomePai,String matricula,
-		String telefone,String idade, Curso curso, Periodo periodo ){
+public record AlunoListagemDados(Long id, String student, String mother,String father,
+		String phone,String age, Curso course, Periodo period , String email){
 
 	public AlunoListagemDados(Aluno aluno) {
-		this(aluno.getId(), aluno.getNome(), aluno.getNomeMae(),aluno.getNomePai(),aluno.getMatricula(), 
-				aluno.getTelefone(), aluno.getIdade() , aluno.getCurso(), aluno.getPeriodo());
+		this(aluno.getId(), aluno.getStudent(), aluno.getMother(),aluno.getFather(), 
+				aluno.getphone(), aluno.getAge() , aluno.getCourse(), aluno.getPeriod(), aluno.getEmail());
 	}
 }
