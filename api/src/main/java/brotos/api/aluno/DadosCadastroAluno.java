@@ -32,7 +32,6 @@ public record DadosCadastroAluno(
 		@Email
 		String email, 
 		
-		@NotBlank
 		String password) {
 
 }

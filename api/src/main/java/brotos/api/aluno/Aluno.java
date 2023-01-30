@@ -52,29 +52,29 @@ public class Aluno {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getstudent() {
+	public String getStudent() {
 		return student;
 	}
-	public void setstudent(String student) {
+	public void setStudent(String student) {
 		this.student = student;
 	}
-	public String getmother() {
+	public String getMother() {
 		return mother;
 	}
-	public void setmother(String mother) {
+	public void setMother(String mother) {
 		this.mother = mother;
 	}
-	public String getfather() {
+	public String getFather() {
 		return father;
 	}
-	public void setfather(String father) {
+	public void setFather(String father) {
 		this.father = father;
 	}
 
-	public String getage() {
+	public String getAge() {
 		return age;
 	}
-	public void setage(String age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getEmail() {
@@ -83,16 +83,16 @@ public class Aluno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Curso getcourse() {
+	public Curso getCourse() {
 		return course;
 	}
-	public void setcourse(Curso course) {
+	public void setCourse(Curso course) {
 		this.course = course;
 	}
-	public Periodo getperiod() {
+	public Periodo getPeriod() {
 		return period;
 	}
-	public void setperiod(Periodo period) {
+	public void setPeriod(Periodo period) {
 		this.period = period;
 	}
 	public void atualizarDados(@Valid AtualizacaoDadosAlunos dados) {
