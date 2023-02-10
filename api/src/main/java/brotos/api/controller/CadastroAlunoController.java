@@ -2,9 +2,10 @@ package brotos.api.controller;
 
 import java.util.List;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +26,9 @@ import jakarta.validation.Valid;
 
 @CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
-@RequestMapping("/cadastro-aluno")
-public class CadastroAlunoController {
+@ControllerAdvice
+@RequestMapping("/aluno")
+public class CadastroAlunoController { 
 	
 	@Autowired
 	private AlunoRepository repository;
@@ -40,6 +42,11 @@ public class CadastroAlunoController {
 	@GetMapping
 	public List<AlunoListagemDados> listarAlunosCadastrados(){
 		return repository.findAll().stream().map(AlunoListagemDados::new).toList();	
+	}
+	
+	@GetMapping("/{id}")
+	public List<AlunoListagemDados> listarAlunosCadastradosPorId(@PathVariable Long id){
+			return repository.findById(id).stream().map(AlunoListagemDados::new).toList();	
 	}
 	
 	@PutMapping
